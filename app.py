@@ -19,9 +19,7 @@ app.register_blueprint(inventarios)
 # EndBlueprints
 
 if __name__ == "__main__":
-    app.run(
-        debug=True,
-        port=5000
-    )
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=80)
 
     # CHANGE IN PRODUCTION
